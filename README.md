@@ -48,10 +48,10 @@ Great! We can use these functions in the following exercises.
 Flatiron School is holding a mini mathematics contest and there are 9 people in the last round. 
 
 #### a. Imagine flatiron school is giving out bronze, silver, and gold medal respectively. How many possible ways are there to create this top three?
-
+import math
 
 ```python
-medal_top_3 = None
+medal_top_3 = math.factorial(num_medals)
 medal_top_3 # 504.0
 ```
 
