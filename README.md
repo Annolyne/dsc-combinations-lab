@@ -51,7 +51,7 @@ Flatiron School is holding a mini mathematics contest and there are 9 people in 
 
 
 ```python
-medal_top_3 = None
+medal_top_3 = permutation(9,3)
 medal_top_3 # 504.0
 ```
 
@@ -59,7 +59,7 @@ medal_top_3 # 504.0
 
 
 ```python
-scholarship_top_3 = None
+scholarship_top_3 = combination(9,3)
 scholarship_top_3 # 84.0
 ```
 
@@ -73,22 +73,23 @@ Write the code for getting total number of ways of drawing 2 out of 6 and 3 out 
 
 
 ```python
-draw_cons = None
-draw_vow = None
+draw_cons =combination(6,2)
+draw_vow = combination(4,3)
 ```
 
 The total number of ways to draw 5 letters out of 10 letters.
 
 
 ```python
-sample = None
+sample = combination(10,5)
 ```
 
 The probability of drawing 2 consonants and 3 vowels when drawing 5 letters:
 
 
 ```python
-None # 0.23809523809523808
+(draw_cons*draw_vow)/sample
+ # 0.23809523809523808
 ```
 
 #### b. Out of 6 consonants and 4 vowels, how many words with 2 consonants and 3 vowels can be formed?
@@ -97,22 +98,22 @@ You can reuse a part of the previous exercise. Which part? print the result belo
 
 
 ```python
-draw_cons = None
-draw_vow = None
+draw_cons = combination(6,2)
+draw_vow = combination(4,3)
 ```
 
 Now we need to take into account that order is important.
 
 
 ```python
-order_5_letters = None
+order_5_letters = factorial(5)
 ```
 
 The total number of words with 2 consonants and 3 vowels then equals:
 
 
 ```python
-total_words = None
+total_words = draw_cons*draw_vow*order_5_letters
 print("In total,",  total_words, "words with 2 consonants and 3 vowels can be formed from our existing letter pool.")
 # In total, 7200.0 words with 2 consonants and 3 vowels can be formed from our existing letter pool.
 ```
@@ -123,6 +124,13 @@ We're holding a mini soccer tournament and 16 people are participating. We'd lik
 
 ```python
 # your code here  # the answer is 63063000.0
+first_team = combination(16,4)
+second_team = combination(12,4)
+third_team = combination(8,4)
+fourth_team = combination(4,4)
+
+total_comb =(first_team *second_team *third_team* fourth_team)
+total_comb
 ```
 
 ## Summary
